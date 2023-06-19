@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class MiniMaxManager : MonoBehaviour
 {
-
     private void Start()
     {
         TryPost();
