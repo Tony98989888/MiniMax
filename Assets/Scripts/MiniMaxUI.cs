@@ -77,7 +77,9 @@ public class MiniMaxUI : MonoBehaviour
         var response = await client.SendAsync(request);
         response.EnsureSuccessStatusCode();
         var result = await response.Content.ReadAsStringAsync();
-        m_responseText.text = m_responseText.text + "\n" + result;
+        MiniMaxResponseData responseData = JsonUtility.FromJson<MiniMaxResponseData>(result);
+        m_responseText.text = m_responseText.text + "\n" + responseData.reply;
+        Debug.Log(responseData.reply);
     }
 
     private void OnMessageValueChanged(string message)
