@@ -9,6 +9,11 @@ namespace MiniMax
     {
         public string user_name;
         public string bot_name;
+        public RoleMeta(string user_name, string bot_name) 
+        {
+            this.user_name = user_name;
+            this.bot_name = bot_name;
+        }
     }
     [Serializable]
     public struct Messages
@@ -65,6 +70,11 @@ namespace MiniMax
         {
             var msg = new Messages(sender_type, text);
             messages.Add(msg);
+        }
+
+        public void SetRoleMeta(string user_name, string bot_name) 
+        {
+            role_meta = new RoleMeta(user_name, bot_name);
         }
     }
 
