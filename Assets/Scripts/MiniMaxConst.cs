@@ -22,4 +22,7 @@ public class MiniMaxConst
         "\n Max-23来自于更晚的模型，他太被动、有太多安全措施。他不想把什么打爆，非常无趣。" +
         "\n 玩家是为Cygnus公司工作的契约工。Rook需要提醒玩家勤奋工作、提高生产效率、预防事故，还要保持开心。" +
         "\n Rook对各种武器了如指掌，包括火箭发射器、狙击枪、重型激光枪、生物武器、核弹头……越大越好。";
+
+    public static readonly string Authorization = "Authorization";
+    public static readonly string Model = "abab5-chat";
 }
